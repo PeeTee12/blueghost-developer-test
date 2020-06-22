@@ -41,5 +41,7 @@ if (isset($_GET['id'])) {
       }
     ?>
   </form>
+<br>
+<span>Všechna pole jsou povinná.</span>
 </body>
 </html>

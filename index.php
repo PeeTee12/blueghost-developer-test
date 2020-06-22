@@ -1,5 +1,5 @@
 <?php
-require_once 'lib/config.php';
+require_once 'config/config.php';
 $info = '';
 $url = '';
 if (!empty($_GET['url']))
@@ -73,15 +73,15 @@ $clientList .=
   <title>Klienti</title>
 </head>
 <body>
-  <h1>Seznam klientů</h1>
   <?php
     if ($url === IDENTIFIKATOR_KONTAKTU)
       include('./identifikator-kontaktu.php');
     else {
-      echo $clientList;
+      echo '<h1>Seznam klientů</h1>';
       echo
         '<button><a href="./identifikator-kontaktu">Vytvořit klienta</a></button>
         <p>'.$info.'</p>';
+      echo $clientList;
 
     }
   ?>

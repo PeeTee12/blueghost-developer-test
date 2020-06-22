@@ -1,5 +1,5 @@
 <?php
-require_once 'lib/config.php';
+require_once 'config/config.php';
 
 if (isset($_GET['id'])) {
   $database = new mysqli(DATABASE, USERNAME, PASSWORD, DATABASE_NAME, PORT);
@@ -11,12 +11,13 @@ if (isset($_GET['id'])) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>Identifikátor kontaktu</title>
 </head>
 <body>
+<h1><?php echo $client['name'] ?? 'Vytvořit nového klienta' ?></h1>
 <button><a href="./">Zpět</a></button>
   <form action="index.php" method="post">
     <label for="name">Jméno a příjmení</label>
